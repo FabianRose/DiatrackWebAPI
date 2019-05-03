@@ -13,8 +13,9 @@ namespace DiatrackWebAPI.Model
         [Column("reading_type_id")]
         [StringLength(2)]
         public string ReadingTypeId { get; set; }
-        [Column("reading_date", TypeName = "date")]
-        public DateTime ReadingDate { get; set; }
+        [Column("reading_date")]
+        [StringLength(20)]
+        public string ReadingDate { get; set; }
         [Required]
         [Column("reading_value")]
         [StringLength(20)]
